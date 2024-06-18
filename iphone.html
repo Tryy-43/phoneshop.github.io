@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Product Gallery</title>
+    <link rel="stylesheet" href="nav.css" />
+    <style>
+      header {
+        background: linear-gradient(135deg, #50194d, #232449, #4d2c8a);
+        width: 100%;
+        height: 70px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        color: #5ba9f1;
+      }
+      :root {
+        --primary-bg: linear-gradient(135deg, #50194d, #232449, #4d2c8a);
+        --card-bg: #fff;
+        --card-shadow: rgba(0, 0, 0, 0.1);
+        --card-radius: 15px;
+        --hover-transform: scale(1.1);
+        --hover-shadow: rgba(0, 0, 0, 0.2);
+        --font-color: #333;
+        --font-family: Arial, sans-serif;
+      }
+
+      body {
+        font-family: var(--font-family);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: auto;
+        margin: 0px;
+
+        background: var(--primary-bg);
+        color: var(--font-color);
+      }
+
+      .product-gallery {
+        display: flex;
+        gap: 20px;
+        padding: 20px;
+        background-color: rgb(181, 221, 240);
+        color: #ffff;
+        border-radius: var(--card-radius);
+        box-shadow: 0 4px 10px var(--card-shadow);
+        margin-bottom: 20px;
+      }
+
+      .product {
+        text-align: center;
+        flex: 1;
+      }
+
+      .product img {
+        width: 80%;
+        height: auto;
+        border-radius: 10px;
+        box-shadow: 0 4px 6px var(--card-shadow);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+      }
+
+      .product img:hover {
+        transform: var(--hover-transform);
+        box-shadow: 0 8px 12px var(--hover-shadow);
+      }
+
+      .product h4 {
+        margin: 10px 0;
+        font-size: 18px;
+      }
+
+      .product p {
+        margin-top: 10px;
+        font-size: 14px;
+      }
+
+      .product button {
+        margin-top: 10px;
+        padding: 10px 20px;
+        font-size: 14px;
+        color: #fff;
+        background-color: #5ba9f1;
+        border: 1px solid #ff0000;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+      }
+
+      .product button:hover {
+        background-color: #ffffff;
+        color: #004280;
+      }
+
+      @media (max-width: 768px) {
+        .product-gallery {
+          flex-direction: column;
+        }
+
+        .product img {
+          width: 100%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <marquee behavior="scroll" direction="left"
+        ><h1>Wellcom to DSS phone shop</h1></marquee
+      >
+    </header>
+    <div class="product-gallery">
+      <div class="product">
+        <img src="iphone-13.webp" alt="iPhone 13 Pro Max - 128GB" />
+        <h4>Iphone 13 Pro Max</h4>
+        <p>Color: Black<br />Storage: 128GB<br />Chip: Apple IOS A17</p>
+        <button>Shop now</button>
+      </div>
+      <div class="product">
+        <img src="iphone-13.webp" alt="iPhone 13 Pro Max - 256GB" />
+        <h4>Iphone 13 Pro Max</h4>
+        <p>Color: Black<br />Storage: 256GB<br />Chip: Apple IOS A17</p>
+        <button>Shop now</button>
+      </div>
+      <div class="product">
+        <img src="iphone-13.webp" alt="iPhone 13 Pro Max - 1TB" />
+        <h4>Iphone 13 Pro Max</h4>
+        <p>Color: Black<br />Storage: 1TB<br />Chip: Apple IOS A17</p>
+        <button>Shop now</button>
+      </div>
+    </div>
+
+    <div class="product-gallery">
+      <div class="product">
+        <img src="iphone-14.webp" alt="iPhone 14 Pro Max - 128GB" />
+        <h4>Iphone 14 Pro Max</h4>
+        <p>Color: Gold<br />Storage: 128GB<br />Chip: Apple IOS A17</p>
+        <button>Shop now</button>
+      </div>
+      <div class="product">
+        <img src="iphone-14.webp" alt="iPhone 14 Pro Max - 256GB" />
+        <h4>Iphone 14 Pro Max</h4>
+        <p>Color: Gold<br />Storage: 256GB<br />Chip: Apple IOS A17</p>
+        <button>Shop now</button>
+      </div>
+      <div class="product">
+        <img src="iphone-14.webp" alt="iPhone 14 Pro Max - 1TB" />
+        <h4>Iphone 14 Pro Max</h4>
+        <p>Color: Gold<br />Storage: 1TB<br />Chip: Apple IOS A17</p>
+        <button>Shop now</button>
+      </div>
+    </div>
+
+    <div class="product-gallery">
+      <div class="product">
+        <img src="iphone-15.png" alt="iPhone 15 Pro Max - 128GB" />
+        <h4>Iphone 15 Pro Max</h4>
+        <p>Color: Gold<br />Storage: 128GB<br />Chip: Apple IOS A17</p>
+        <button>Shop now</button>
+      </div>
+      <div class="product">
+        <img src="iphone-15.png" alt="iPhone 15 Pro Max - 256GB" />
+        <h4>Iphone 15 Pro Max</h4>
+        <p>Color: Gold<br />Storage: 256GB<br />Chip: Apple IOS A17</p>
+        <button>Shop now</button>
+      </div>
+      <div class="product">
+        <img src="iphone-15.png" alt="iPhone 15 Pro Max - 1TB" />
+        <h4>Iphone 15 Pro Max</h4>
+        <p>Color: Gold<br />Storage: 1TB<br />Chip: Apple IOS A17</p>
+        <button>Shop now</button>
+      </div>
+    </div>
+
+    <div class="product-gallery">
+      <div class="product">
+        <img src="iphone_15pro.jpg" alt="iPhone 15 Pro - 128GB" />
+        <h4>Iphone 15 Pro</h4>
+        <p>Color: Gold<br />Storage: 128GB<br />Chip: Apple IOS A17</p>
+        <button>Shop now</button>
+      </div>
+      <div class="product">
+        <img src="iphone_15pro.jpg" alt="iPhone 15 Pro - 256GB" />
+        <h4>Iphone 15 Pro</h4>
+        <p>Color: Gold<br />Storage: 256GB<br />Chip: Apple IOS A17</p>
+        <button>Shop now</button>
+      </div>
+      <div class="product">
+        <img src="iphone_15pro.jpg" alt="iPhone 15 Pro - 1TB" />
+        <h4>Iphone 15 Pro</h4>
+        <p>Color: Gold<br />Storage: 1TB<br />Chip: Apple IOS A17</p>
+        <button>Shop now</button>
+      </div>
+    </div>
+  </body>
+</html>

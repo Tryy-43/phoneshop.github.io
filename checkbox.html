@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Enhanced Form</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        background: linear-gradient(135deg, #6d5aad, #1e0425, #784ac2);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+        font-family: "Roboto", sans-serif;
+        color: #fff;
+        transition: background 0.3s;
+      }
+      .overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5);
+        z-index: 1;
+      }
+      .form-container {
+        background: linear-gradient(135deg, #251e3b, #1e0425, #261542);
+        padding: 60px;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        max-width: 500px;
+        width: 100%;
+        box-sizing: border-box;
+        position: relative;
+        z-index: 2;
+      }
+      .form-container h2 {
+        text-align: center;
+        margin-bottom: 40px;
+      }
+      .field,
+      .gender,
+      .buttons {
+        margin-bottom: 20px;
+      }
+      label {
+        display: block;
+        margin-bottom: 5px;
+        font-weight: bold;
+      }
+
+      input[type="text"],
+      input[type="email"],
+      input[type="password"] {
+        width: 100%;
+        padding: 10px;
+        margin-top: 5px;
+        border: none;
+        border-radius: 5px;
+        box-sizing: border-box;
+        border: 2px solid #00df0b;
+        background-color: #887dad8a;
+        color: #fff;
+      }
+      input[type="text"]:focus,
+      input[type="email"]:focus,
+      input[type="password"]:focus {
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.8);
+        outline: none;
+        border-color: #ff00f28a;
+      }
+      .gender label {
+        display: inline-block;
+        margin-right: 10px;
+        font-weight: normal;
+      }
+      .gender input[type="radio"] {
+        margin-right: 5px;
+      }
+      .buttons {
+        display: flex;
+        justify-content: space-between;
+      }
+      .buttons input[type="submit"],
+      .buttons input[type="reset"] {
+        padding: 10px;
+        border: none;
+        border-radius: 5px;
+        background-color: #2d2464;
+        color: rgb(175, 182, 206);
+        font-weight: bold;
+        cursor: pointer;
+        transition: background-color 0.3s;
+      }
+      .buttons input[type="submit"]:hover,
+      .buttons input[type="reset"]:hover {
+        background-color: rgb(175, 182, 206);
+        color: #2d2464;
+      }
+      .forget-password {
+        text-align: center;
+        margin-top: 10px;
+        margin-bottom: 10px;
+      }
+      .forget-password a {
+        color: #f0cb95;
+        text-decoration: none;
+        font-weight: unset;
+      }
+      .forget-password a:hover {
+        text-decoration: underline;
+      }
+      #a-t {
+        background: #2d2464;
+        border-radius: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="overlay"></div>
+    <form
+      action="/action_page.php"
+      method="post"
+      aria-label="Registration Form"
+    >
+      <div class="form-container">
+        <h2>Registration Form</h2>
+        <div class="field">
+          <label for="first-name">First Name</label>
+          <input
+            type="text"
+            id="first-name"
+            name="first-name"
+            placeholder="First Name"
+            required
+          />
+        </div>
+
+        <div class="field">
+          <label for="last-name">Last Name</label>
+          <input
+            type="text"
+            id="last-name"
+            name="last-name"
+            placeholder="Last Name"
+            required
+          />
+        </div>
+
+        <fieldset class="gender">
+          <legend>Gender</legend>
+          <label
+            ><input type="radio" name="gender" value="male" required />
+            Male</label
+          >
+          <label
+            ><input type="radio" name="gender" value="female" required />
+            Female</label
+          >
+        </fieldset>
+        <div class="field">
+          <label for="email">Email</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="Email"
+            required
+          />
+        </div>
+
+        <div class="field">
+          <label for="password">Password</label>
+          <input
+            type="password"
+            id="password"
+            name="password"
+            placeholder="Password"
+            required
+          />
+        </div>
+
+        <div class="forget-password">
+          <a href="forget_password.html">Forgot Password?</a>
+        </div>
+
+        <div class="buttons">
+          <a href="index.html"><input type="submit" value="Sign In" /></a>
+          <input type="reset" value="Reset" />
+        </div>
+        <a href="index.html">BackHome</a>
+      </div>
+    </form>
+  </body>
+</html>

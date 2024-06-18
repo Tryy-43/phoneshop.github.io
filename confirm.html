@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Account Confirmation</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Montserrat:wght@600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background: linear-gradient(135deg, #50194d, #232449, #4d2c8a);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: 'Roboto', sans-serif;
+            color: #8080bb;
+            transition: background 0.3s;
+        }
+        form {
+            background: linear-gradient(135deg, #2b1742, #232449, #5f3686);
+            padding: 60px;
+            border-radius: 15px;
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            width: 300px;
+            box-sizing: border-box;
+            transition: transform 0.3s;
+        }
+        h2 {
+            margin-top: 0;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 24px;
+            color: #00eeff;
+        }
+        p {
+            color: #d1d5db;
+        }
+        div {
+            margin-bottom: 15px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            color: #6287be;
+        }
+        input[type="text"] {
+            background-color: rgb(65, 54, 105);
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #00ec27;
+            border-radius: 4px;
+            box-sizing: border-box;
+            color: #ffffff;
+            font-size: 14px;
+        }
+        input[type="text"]:focus {
+            border-color: #ff00f2;
+            outline: none;
+            background-color: rgba(74, 68, 97, 0.719);
+        }
+        input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            background-color: #4c3577;
+            border: none;
+            color: rgb(218, 208, 208);
+            cursor: pointer;
+            border-radius: 20px;
+            font-size: 15px;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+        input[type="submit"]:hover {
+            background-color: #492c8f;
+            transform: translateY(-2px);
+        }
+        input[type="submit"]:active {
+            transform: translateY(1px);
+        }
+    </style>
+</head>
+<body>
+    <form action="">
+        <h2>Confirm your account</h2>
+        <p>We sent a code to your email. Enter that code to confirm your account.</p>
+        <div>
+            <label for="enter">Confirmation Code</label>
+            <input type="text" id="enter" name="enter" placeholder="Enter code">
+        </div>
+
+        <input type="submit" value="Continue">
+    </form>
+</body>
+</html>
