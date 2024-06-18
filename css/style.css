@@ -535,12 +535,48 @@ footer {
   .box-container {
     grid-template-columns: auto auto auto;
   }
+  .product {
+    flex-direction: column;
+    align-items: center;
+    background-color: #fff;
+  }
+  .list-group {
+    flex-direction: row;
+  }
+  .bar {
+    display: none;
+  }
+  .post-product {
+    grid-template-columns: auto auto auto;
+    justify-content: space-evenly;
+    width: 100% !important;
+    margin-top: 30px;
+  }
+  .list-product {
+    width: 100%;
+  }
+  .list-group {
+    justify-content: center;
+  }
 }
 @media screen and (max-width: 820px) {
   .box-container {
     grid-template-columns: auto auto;
     justify-content: space-evenly;
     gap: 20px;
+  }
+}
+@media screen and (max-width: 700px) {
+  .post-product {
+    grid-template-columns: auto auto;
+  }
+  .list-group {
+    flex-direction: row;
+    text-align: center;
+    display: flex;
+    align-items: center;
+
+    justify-content: center;
   }
 }
 @media screen and (max-width: 668px) {
@@ -606,6 +642,25 @@ footer {
   .block1 > ul > li > a {
     font-size: 1.2rem;
     line-height: 24px;
+  }
+}
+@media screen and (max-width: 560px) {
+  .post-product {
+    width: inherit;
+  }
+  .list-item-product {
+    width: 100%;
+  }
+  .list-group {
+    flex-wrap: wrap;
+    flex-flow: column;
+  }
+  .post-product {
+    grid-template-columns: auto;
+  }
+  .item-wrapper {
+    width: 210px;
+    padding: 20px;
   }
 }
 @media screen and (max-width: 470px) {
